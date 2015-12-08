@@ -12,6 +12,13 @@
 //定义广告出现的时间
 #define AdTime 3.0
 
+//广告背景图片名字
+#define AdBackgroundPictureName @"Default"
+//广告图片名字
+#define AdPictureName @"ad"
+
+
+
 @interface MLAdViewController ()
 
 @end
@@ -21,12 +28,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //1.设置背景图片
-    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:AdBackgroundPictureName]];
     [self.view addSubview:backgroundImageView];
     backgroundImageView.frame = self.view.bounds;
     
     //2.设置广告图片
-    UIImageView *adImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ad"]];
+    UIImageView *adImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:AdPictureName]];
     [self.view addSubview:adImageView];
     
     //设置frame
