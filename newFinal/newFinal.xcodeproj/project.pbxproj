@@ -11,6 +11,10 @@
 		1A4213131C167A2B00C1DE55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4213121C167A2B00C1DE55 /* AppDelegate.m */; };
 		1A42131B1C167A2B00C1DE55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A42131A1C167A2B00C1DE55 /* Assets.xcassets */; };
 		1A42131E1C167A2B00C1DE55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A42131C1C167A2B00C1DE55 /* LaunchScreen.storyboard */; };
+		1A4213351C167C9900C1DE55 /* MLAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4213341C167C9900C1DE55 /* MLAdViewController.m */; };
+		1A4213371C167CAB00C1DE55 /* Ad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4213361C167CAB00C1DE55 /* Ad.storyboard */; };
+		1A42133A1C16809400C1DE55 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4213391C16809400C1DE55 /* UIView+Extension.m */; };
+		1A4213421C16894100C1DE55 /* MLMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4213411C16894100C1DE55 /* MLMainTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,14 @@
 		1A42131A1C167A2B00C1DE55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A42131D1C167A2B00C1DE55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A42131F1C167A2B00C1DE55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A4213331C167C9900C1DE55 /* MLAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAdViewController.h; sourceTree = "<group>"; };
+		1A4213341C167C9900C1DE55 /* MLAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAdViewController.m; sourceTree = "<group>"; };
+		1A4213361C167CAB00C1DE55 /* Ad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ad.storyboard; sourceTree = "<group>"; };
+		1A4213381C16809400C1DE55 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		1A4213391C16809400C1DE55 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		1A42133B1C16818700C1DE55 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1A4213401C16894100C1DE55 /* MLMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMainTabBarController.h; sourceTree = "<group>"; };
+		1A4213411C16894100C1DE55 /* MLMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMainTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				1A4213261C167B7400C1DE55 /* Ad */,
+				1A42133C1C16890700C1DE55 /* MainTabbar */,
 				1A42132A1C167B7400C1DE55 /* copy */,
 				1A42132E1C167B7400C1DE55 /* Other */,
 			);
@@ -82,9 +95,9 @@
 		1A4213261C167B7400C1DE55 /* Ad */ = {
 			isa = PBXGroup;
 			children = (
-				1A4213271C167B7400C1DE55 /* Controller */,
 				1A4213281C167B7400C1DE55 /* Model */,
 				1A4213291C167B7400C1DE55 /* View */,
+				1A4213271C167B7400C1DE55 /* Controller */,
 			);
 			path = Ad;
 			sourceTree = "<group>";
@@ -92,6 +105,8 @@
 		1A4213271C167B7400C1DE55 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A4213331C167C9900C1DE55 /* MLAdViewController.h */,
+				1A4213341C167C9900C1DE55 /* MLAdViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,6 +121,7 @@
 		1A4213291C167B7400C1DE55 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A4213361C167CAB00C1DE55 /* Ad.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +181,8 @@
 		1A4213301C167B7400C1DE55 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				1A4213381C16809400C1DE55 /* UIView+Extension.h */,
+				1A4213391C16809400C1DE55 /* UIView+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -179,8 +197,42 @@
 		1A4213321C167B7400C1DE55 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1A42133B1C16818700C1DE55 /* PrefixHeader.pch */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		1A42133C1C16890700C1DE55 /* MainTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				1A42133E1C16890700C1DE55 /* Model */,
+				1A42133F1C16890700C1DE55 /* View */,
+				1A42133D1C16890700C1DE55 /* Controller */,
+			);
+			path = MainTabbar;
+			sourceTree = "<group>";
+		};
+		1A42133D1C16890700C1DE55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A4213401C16894100C1DE55 /* MLMainTabBarController.h */,
+				1A4213411C16894100C1DE55 /* MLMainTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A42133E1C16890700C1DE55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A42133F1C16890700C1DE55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A42131E1C167A2B00C1DE55 /* LaunchScreen.storyboard in Resources */,
+				1A4213371C167CAB00C1DE55 /* Ad.storyboard in Resources */,
 				1A42131B1C167A2B00C1DE55 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A4213351C167C9900C1DE55 /* MLAdViewController.m in Sources */,
 				1A4213131C167A2B00C1DE55 /* AppDelegate.m in Sources */,
+				1A4213421C16894100C1DE55 /* MLMainTabBarController.m in Sources */,
+				1A42133A1C16809400C1DE55 /* UIView+Extension.m in Sources */,
 				1A4213101C167A2B00C1DE55 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +413,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/newFinal/Class/Other/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = newFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SocererGroup.newFinal;
@@ -368,6 +426,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/newFinal/Class/Other/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = newFinal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SocererGroup.newFinal;
