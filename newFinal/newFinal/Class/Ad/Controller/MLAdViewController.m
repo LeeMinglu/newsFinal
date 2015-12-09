@@ -43,7 +43,7 @@
     adImageView.centerX = self.view.centerX;
     adImageView.centerY = self.view.height * 0.4;
     
-    //3.广告之后，获取到主窗口，跳到MainTabbar
+//    3.广告之后，获取到主窗口，跳到MainTabbar
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(AdTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
@@ -54,7 +54,7 @@
         MLMainTabBarController *mainTabBarVC = [[MLMainTabBarController alloc] init];
         //3.将MainTabBar控制器作为根控制器
         window.rootViewController = mainTabBarVC;
-        
+    
     });
     
     

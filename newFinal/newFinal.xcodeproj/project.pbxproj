@@ -11,7 +11,6 @@
 		1A0EB9B71C16C8B9008916A2 /* Ad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0EB98F1C16C8B9008916A2 /* Ad.storyboard */; };
 		1A0EB9B81C16C8B9008916A2 /* MLMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB99F1C16C8B9008916A2 /* MLMainTabBarController.m */; };
 		1A0EB9B91C16C8B9008916A2 /* MLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9A11C16C8B9008916A2 /* MLNavigationViewController.m */; };
-		1A0EB9BA1C16C8B9008916A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0EB9A41C16C8B9008916A2 /* Main.storyboard */; };
 		1A0EB9BB1C16C8B9008916A2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9AD1C16C8B9008916A2 /* UIView+Extension.m */; };
 		1A0EB9BE1C16CAD4008916A2 /* MLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9BD1C16CAD4008916A2 /* MLMainViewController.m */; };
 		1A0EB9C01C16CAE7008916A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0EB9BF1C16CAE7008916A2 /* Main.storyboard */; };
@@ -23,6 +22,11 @@
 		1A0EB9D31C16DEFD008916A2 /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0EB9D21C16DEFD008916A2 /* Video.storyboard */; };
 		1A0EB9D51C16DF84008916A2 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0EB9D41C16DF84008916A2 /* Me.storyboard */; };
 		1A0EB9D81C16DFB4008916A2 /* MLMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9D71C16DFB4008916A2 /* MLMeViewController.m */; };
+		1A0EB9DA1C1715FB008916A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0EB9D91C1715FB008916A2 /* Main.storyboard */; };
+		1A0EB9DD1C1718EF008916A2 /* MLBottomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9DC1C1718EF008916A2 /* MLBottomTabBar.m */; };
+		1A0EB9E01C171925008916A2 /* MLBottomTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9DF1C171925008916A2 /* MLBottomTabBarButton.m */; };
+		1A0EB9E41C17210D008916A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9E21C17210D008916A2 /* AppDelegate.m */; };
+		1A0EB9E51C17210D008916A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9E31C17210D008916A2 /* main.m */; };
 		1A42131B1C167A2B00C1DE55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A42131A1C167A2B00C1DE55 /* Assets.xcassets */; };
 		1A42131E1C167A2B00C1DE55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A42131C1C167A2B00C1DE55 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -35,7 +39,6 @@
 		1A0EB99F1C16C8B9008916A2 /* MLMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMainTabBarController.m; sourceTree = "<group>"; };
 		1A0EB9A01C16C8B9008916A2 /* MLNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLNavigationViewController.h; sourceTree = "<group>"; };
 		1A0EB9A11C16C8B9008916A2 /* MLNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLNavigationViewController.m; sourceTree = "<group>"; };
-		1A0EB9A41C16C8B9008916A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1A0EB9AC1C16C8B9008916A2 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		1A0EB9AD1C16C8B9008916A2 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		1A0EB9B01C16C8B9008916A2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -54,6 +57,14 @@
 		1A0EB9D41C16DF84008916A2 /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
 		1A0EB9D61C16DFB4008916A2 /* MLMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMeViewController.h; sourceTree = "<group>"; };
 		1A0EB9D71C16DFB4008916A2 /* MLMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMeViewController.m; sourceTree = "<group>"; };
+		1A0EB9D91C1715FB008916A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1A0EB9DB1C1718EF008916A2 /* MLBottomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBottomTabBar.h; sourceTree = "<group>"; };
+		1A0EB9DC1C1718EF008916A2 /* MLBottomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBottomTabBar.m; sourceTree = "<group>"; };
+		1A0EB9DE1C171925008916A2 /* MLBottomTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBottomTabBarButton.h; sourceTree = "<group>"; };
+		1A0EB9DF1C171925008916A2 /* MLBottomTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBottomTabBarButton.m; sourceTree = "<group>"; };
+		1A0EB9E11C17210D008916A2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1A0EB9E21C17210D008916A2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1A0EB9E31C17210D008916A2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A42130B1C167A2B00C1DE55 /* newFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A42131A1C167A2B00C1DE55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A42131D1C167A2B00C1DE55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -216,6 +227,7 @@
 		1A0EB99B1C16C8B9008916A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A0EB9D91C1715FB008916A2 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,7 +263,10 @@
 		1A0EB9A31C16C8B9008916A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1A0EB9A41C16C8B9008916A2 /* Main.storyboard */,
+				1A0EB9DB1C1718EF008916A2 /* MLBottomTabBar.h */,
+				1A0EB9DC1C1718EF008916A2 /* MLBottomTabBar.m */,
+				1A0EB9DE1C171925008916A2 /* MLBottomTabBarButton.h */,
+				1A0EB9DF1C171925008916A2 /* MLBottomTabBarButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +319,9 @@
 		1A0EB9AA1C16C8B9008916A2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				1A0EB9E11C17210D008916A2 /* AppDelegate.h */,
+				1A0EB9E21C17210D008916A2 /* AppDelegate.m */,
+				1A0EB9E31C17210D008916A2 /* main.m */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -501,9 +519,9 @@
 				1A0EB9C51C16D2AA008916A2 /* Reading.storyboard in Resources */,
 				1A42131B1C167A2B00C1DE55 /* Assets.xcassets in Resources */,
 				1A0EB9D51C16DF84008916A2 /* Me.storyboard in Resources */,
+				1A0EB9DA1C1715FB008916A2 /* Main.storyboard in Resources */,
 				1A0EB9CA1C16D6BC008916A2 /* Discover.storyboard in Resources */,
 				1A0EB9D31C16DEFD008916A2 /* Video.storyboard in Resources */,
-				1A0EB9BA1C16C8B9008916A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0EB9E51C17210D008916A2 /* main.m in Sources */,
 				1A0EB9B61C16C8B9008916A2 /* MLAdViewController.m in Sources */,
 				1A0EB9D11C16DEEF008916A2 /* MLVideoViewController.m in Sources */,
 				1A0EB9D81C16DFB4008916A2 /* MLMeViewController.m in Sources */,
@@ -521,7 +540,10 @@
 				1A0EB9B91C16C8B9008916A2 /* MLNavigationViewController.m in Sources */,
 				1A0EB9BB1C16C8B9008916A2 /* UIView+Extension.m in Sources */,
 				1A0EB9C31C16D212008916A2 /* MLReadingViewController.m in Sources */,
+				1A0EB9DD1C1718EF008916A2 /* MLBottomTabBar.m in Sources */,
+				1A0EB9E41C17210D008916A2 /* AppDelegate.m in Sources */,
 				1A0EB9B81C16C8B9008916A2 /* MLMainTabBarController.m in Sources */,
+				1A0EB9E01C171925008916A2 /* MLBottomTabBarButton.m in Sources */,
 				1A0EB9C81C16D654008916A2 /* MLDiscoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,6 +649,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/newFinal/Class/Other/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = newFinal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SocererGroup.newFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -640,6 +663,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/newFinal/Class/Other/Tools/PrefixHeader.pch";
 				INFOPLIST_FILE = newFinal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SocererGroup.newFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";

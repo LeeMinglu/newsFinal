@@ -29,7 +29,7 @@
     [self setupChildController];
     
     //初始化底部自定义tabbar
-    [self setupCustomTabBar];
+//    [self setupCustomTabBar];
 }
 
 /**
@@ -38,7 +38,6 @@
 - (void)setupChildController {
     //1.新闻中心
     MLNavigationViewController *navMainHall = [self navigationControllerWithStoryBoardName:@"Main"];
-    
     
     //2.阅读中心
     MLNavigationViewController *navReadHall = [self navigationControllerWithStoryBoardName:@"Reading"];
