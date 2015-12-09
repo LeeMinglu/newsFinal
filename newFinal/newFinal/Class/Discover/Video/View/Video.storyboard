@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xt0-HE-BfA">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
@@ -22,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-488" y="349"/>
         </scene>
-        <!--Video View Controller-->
+        <!--视听中心-->
         <scene sceneID="gVw-Ui-lLC">
             <objects>
                 <viewController storyboardIdentifier="Video" id="oLJ-yT-gb8" customClass="MLVideoViewController" sceneMemberID="viewController">
@@ -36,7 +35,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kSa-cd-X0w"/>
+                    <navigationItem key="navigationItem" title="视听中心" id="kSa-cd-X0w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wz4-gX-XuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -166,9 +166,9 @@
 		1A0EB9941C16C8B9008916A2 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				1A0EB9951C16C8B9008916A2 /* Controller */,
 				1A0EB9961C16C8B9008916A2 /* Model */,
 				1A0EB9971C16C8B9008916A2 /* View */,
+				1A0EB9951C16C8B9008916A2 /* Controller */,
 			);
 			path = Discover;
 			sourceTree = "<group>";

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="M0h-9L-ED9">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-511" y="385"/>
         </scene>
-        <!--Main View Controller-->
+        <!--头条-->
         <scene sceneID="fDX-he-Who">
             <objects>
                 <viewController storyboardIdentifier="Main" id="ltS-P7-t5a" customClass="MLMainViewController" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8p9-6r-KGs"/>
+                    <navigationItem key="navigationItem" title="头条" id="8p9-6r-KGs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLd-s8-N5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
