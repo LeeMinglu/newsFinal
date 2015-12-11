@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A04B0771C1AFCFC00463186 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A04B0761C1AFCFC00463186 /* topic_news.json */; };
+		1A04B07A1C1AFE0C00463186 /* MLChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04B0791C1AFE0C00463186 /* MLChannel.m */; };
 		1A0EB9B61C16C8B9008916A2 /* MLAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB98C1C16C8B9008916A2 /* MLAdViewController.m */; };
 		1A0EB9B71C16C8B9008916A2 /* Ad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0EB98F1C16C8B9008916A2 /* Ad.storyboard */; };
 		1A0EB9B81C16C8B9008916A2 /* MLMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB99F1C16C8B9008916A2 /* MLMainTabBarController.m */; };
 		1A0EB9B91C16C8B9008916A2 /* MLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9A11C16C8B9008916A2 /* MLNavigationViewController.m */; };
 		1A0EB9BB1C16C8B9008916A2 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9AD1C16C8B9008916A2 /* UIView+Extension.m */; };
 		1A0EB9BE1C16CAD4008916A2 /* MLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9BD1C16CAD4008916A2 /* MLMainViewController.m */; };
-		1A0EB9C01C16CAE7008916A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0EB9BF1C16CAE7008916A2 /* Main.storyboard */; };
 		1A0EB9C31C16D212008916A2 /* MLReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9C21C16D212008916A2 /* MLReadingViewController.m */; };
 		1A0EB9C51C16D2AA008916A2 /* Reading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0EB9C41C16D2AA008916A2 /* Reading.storyboard */; };
 		1A0EB9C81C16D654008916A2 /* MLDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9C71C16D654008916A2 /* MLDiscoverViewController.m */; };
@@ -29,9 +30,13 @@
 		1A0EB9E51C17210D008916A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9E31C17210D008916A2 /* main.m */; };
 		1A42131B1C167A2B00C1DE55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A42131A1C167A2B00C1DE55 /* Assets.xcassets */; };
 		1A42131E1C167A2B00C1DE55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A42131C1C167A2B00C1DE55 /* LaunchScreen.storyboard */; };
+		1AFDF61E1C194A9000050130 /* MLHomeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFDF61D1C194A9000050130 /* MLHomeLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A04B0761C1AFCFC00463186 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		1A04B0781C1AFE0C00463186 /* MLChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLChannel.h; sourceTree = "<group>"; };
+		1A04B0791C1AFE0C00463186 /* MLChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLChannel.m; sourceTree = "<group>"; };
 		1A0EB98B1C16C8B9008916A2 /* MLAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAdViewController.h; sourceTree = "<group>"; };
 		1A0EB98C1C16C8B9008916A2 /* MLAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAdViewController.m; sourceTree = "<group>"; };
 		1A0EB98F1C16C8B9008916A2 /* Ad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ad.storyboard; sourceTree = "<group>"; };
@@ -44,7 +49,6 @@
 		1A0EB9B01C16C8B9008916A2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1A0EB9BC1C16CAD4008916A2 /* MLMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMainViewController.h; sourceTree = "<group>"; };
 		1A0EB9BD1C16CAD4008916A2 /* MLMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMainViewController.m; sourceTree = "<group>"; };
-		1A0EB9BF1C16CAE7008916A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1A0EB9C11C16D212008916A2 /* MLReadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLReadingViewController.h; sourceTree = "<group>"; };
 		1A0EB9C21C16D212008916A2 /* MLReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLReadingViewController.m; sourceTree = "<group>"; };
 		1A0EB9C41C16D2AA008916A2 /* Reading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reading.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 		1A42131A1C167A2B00C1DE55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A42131D1C167A2B00C1DE55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A42131F1C167A2B00C1DE55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AFDF61C1C194A9000050130 /* MLHomeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHomeLabel.h; sourceTree = "<group>"; };
+		1AFDF61D1C194A9000050130 /* MLHomeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHomeLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +93,11 @@
 			children = (
 				1A0EB9891C16C8B9008916A2 /* Ad */,
 				1A0EB99C1C16C8B9008916A2 /* MainTabbar */,
-				1A0EB9981C16C8B9008916A2 /* Main */,
-				1A0EB9B11C16C8B9008916A2 /* Reading */,
-				1A0EB9941C16C8B9008916A2 /* Discover */,
-				1A0EB9CB1C16D922008916A2 /* Video */,
-				1A0EB9A51C16C8B9008916A2 /* Me */,
+				1A0EB9981C16C8B9008916A2 /* Main--子控制器01 */,
+				1A0EB9B11C16C8B9008916A2 /* Reading--子控制器02 */,
+				1A0EB9941C16C8B9008916A2 /* Discover--子控制器03 */,
+				1A0EB9CB1C16D922008916A2 /* Video--子控制器04 */,
+				1A0EB9A51C16C8B9008916A2 /* Me--子控制器05 */,
 				1A0EB9A91C16C8B9008916A2 /* Other */,
 				1A0EB9901C16C8B9008916A2 /* copy1 */,
 			);
@@ -163,13 +169,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1A0EB9941C16C8B9008916A2 /* Discover */ = {
+		1A0EB9941C16C8B9008916A2 /* Discover--子控制器03 */ = {
 			isa = PBXGroup;
 			children = (
 				1A0EB9961C16C8B9008916A2 /* Model */,
 				1A0EB9971C16C8B9008916A2 /* View */,
 				1A0EB9951C16C8B9008916A2 /* Controller */,
 			);
+			name = "Discover--子控制器03";
 			path = Discover;
 			sourceTree = "<group>";
 		};
@@ -197,13 +204,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1A0EB9981C16C8B9008916A2 /* Main */ = {
+		1A0EB9981C16C8B9008916A2 /* Main--子控制器01 */ = {
 			isa = PBXGroup;
 			children = (
-				1A0EB9991C16C8B9008916A2 /* Controller */,
 				1A0EB99A1C16C8B9008916A2 /* Model */,
 				1A0EB99B1C16C8B9008916A2 /* View */,
+				1A0EB9991C16C8B9008916A2 /* Controller */,
 			);
+			name = "Main--子控制器01";
 			path = Main;
 			sourceTree = "<group>";
 		};
@@ -212,6 +220,7 @@
 			children = (
 				1A0EB9BC1C16CAD4008916A2 /* MLMainViewController.h */,
 				1A0EB9BD1C16CAD4008916A2 /* MLMainViewController.m */,
+				1A04B0761C1AFCFC00463186 /* topic_news.json */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,7 +228,8 @@
 		1A0EB99A1C16C8B9008916A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1A0EB9BF1C16CAE7008916A2 /* Main.storyboard */,
+				1A04B0781C1AFE0C00463186 /* MLChannel.h */,
+				1A04B0791C1AFE0C00463186 /* MLChannel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				1A0EB9D91C1715FB008916A2 /* Main.storyboard */,
+				1AFDF61C1C194A9000050130 /* MLHomeLabel.h */,
+				1AFDF61D1C194A9000050130 /* MLHomeLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,13 +283,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1A0EB9A51C16C8B9008916A2 /* Me */ = {
+		1A0EB9A51C16C8B9008916A2 /* Me--子控制器05 */ = {
 			isa = PBXGroup;
 			children = (
 				1A0EB9A61C16C8B9008916A2 /* Controller */,
 				1A0EB9A71C16C8B9008916A2 /* Model */,
 				1A0EB9A81C16C8B9008916A2 /* View */,
 			);
+			name = "Me--子控制器05";
 			path = Me;
 			sourceTree = "<group>";
 		};
@@ -350,13 +363,14 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		1A0EB9B11C16C8B9008916A2 /* Reading */ = {
+		1A0EB9B11C16C8B9008916A2 /* Reading--子控制器02 */ = {
 			isa = PBXGroup;
 			children = (
 				1A0EB9B31C16C8B9008916A2 /* Model */,
 				1A0EB9B41C16C8B9008916A2 /* View */,
 				1A0EB9B21C16C8B9008916A2 /* Controller */,
 			);
+			name = "Reading--子控制器02";
 			path = Reading;
 			sourceTree = "<group>";
 		};
@@ -384,14 +398,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1A0EB9CB1C16D922008916A2 /* Video */ = {
+		1A0EB9CB1C16D922008916A2 /* Video--子控制器04 */ = {
 			isa = PBXGroup;
 			children = (
 				1A0EB9CC1C16D922008916A2 /* Controller */,
 				1A0EB9CD1C16D922008916A2 /* Model */,
 				1A0EB9CE1C16D922008916A2 /* View */,
 			);
-			name = Video;
+			name = "Video--子控制器04";
 			path = Discover/Video;
 			sourceTree = "<group>";
 		};
@@ -514,9 +528,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A42131E1C167A2B00C1DE55 /* LaunchScreen.storyboard in Resources */,
-				1A0EB9C01C16CAE7008916A2 /* Main.storyboard in Resources */,
 				1A0EB9B71C16C8B9008916A2 /* Ad.storyboard in Resources */,
 				1A0EB9C51C16D2AA008916A2 /* Reading.storyboard in Resources */,
+				1A04B0771C1AFCFC00463186 /* topic_news.json in Resources */,
 				1A42131B1C167A2B00C1DE55 /* Assets.xcassets in Resources */,
 				1A0EB9D51C16DF84008916A2 /* Me.storyboard in Resources */,
 				1A0EB9DA1C1715FB008916A2 /* Main.storyboard in Resources */,
@@ -532,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AFDF61E1C194A9000050130 /* MLHomeLabel.m in Sources */,
 				1A0EB9E51C17210D008916A2 /* main.m in Sources */,
 				1A0EB9B61C16C8B9008916A2 /* MLAdViewController.m in Sources */,
 				1A0EB9D11C16DEEF008916A2 /* MLVideoViewController.m in Sources */,
@@ -543,6 +558,7 @@
 				1A0EB9DD1C1718EF008916A2 /* MLBottomTabBar.m in Sources */,
 				1A0EB9E41C17210D008916A2 /* AppDelegate.m in Sources */,
 				1A0EB9B81C16C8B9008916A2 /* MLMainTabBarController.m in Sources */,
+				1A04B07A1C1AFE0C00463186 /* MLChannel.m in Sources */,
 				1A0EB9E01C171925008916A2 /* MLBottomTabBarButton.m in Sources */,
 				1A0EB9C81C16D654008916A2 /* MLDiscoverViewController.m in Sources */,
 			);

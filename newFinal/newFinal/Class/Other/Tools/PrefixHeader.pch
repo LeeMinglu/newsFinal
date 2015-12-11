@@ -25,3 +25,22 @@
 #else
 #define MLLog(...)
 #endif
+
+/**
+ *  定义RGB宏
+ *
+ *  @param r 红
+ *  @param g 绿
+ *  @param b 蓝
+ *
+ *  @return <#return value description#>
+ */
+#define MLRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+//定义透明度RGB
+#define MLARGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+//定义随机RGB
+#define MLRandomColor MLRGBColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+#define MLNoteCenter [NSNotificationCenter defaultCenter]
