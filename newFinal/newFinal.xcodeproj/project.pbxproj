@@ -32,6 +32,7 @@
 		1A0EB9E51C17210D008916A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9E31C17210D008916A2 /* main.m */; };
 		1A42131B1C167A2B00C1DE55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A42131A1C167A2B00C1DE55 /* Assets.xcassets */; };
 		1A42131E1C167A2B00C1DE55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A42131C1C167A2B00C1DE55 /* LaunchScreen.storyboard */; };
+		1AFD9BCE1C1C3A0C00DB8569 /* MLLeftDockMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD9BCD1C1C3A0C00DB8569 /* MLLeftDockMenu.m */; };
 		1AFDF61E1C194A9000050130 /* MLHomeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFDF61D1C194A9000050130 /* MLHomeLabel.m */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,8 @@
 		1A42131A1C167A2B00C1DE55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A42131D1C167A2B00C1DE55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A42131F1C167A2B00C1DE55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AFD9BCC1C1C3A0C00DB8569 /* MLLeftDockMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLeftDockMenu.h; sourceTree = "<group>"; };
+		1AFD9BCD1C1C3A0C00DB8569 /* MLLeftDockMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLeftDockMenu.m; sourceTree = "<group>"; };
 		1AFDF61C1C194A9000050130 /* MLHomeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHomeLabel.h; sourceTree = "<group>"; };
 		1AFDF61D1C194A9000050130 /* MLHomeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHomeLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,18 +163,53 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1A026C781C1C37FF00429022 /* LeftDockMenu-左侧菜单视图 */ = {
+			isa = PBXGroup;
+			children = (
+				1A026C791C1C37FF00429022 /* Controller */,
+				1A026C7A1C1C37FF00429022 /* Model */,
+				1A026C7B1C1C37FF00429022 /* View */,
+			);
+			name = "LeftDockMenu-左侧菜单视图";
+			path = LeftDockMenu;
+			sourceTree = "<group>";
+		};
+		1A026C791C1C37FF00429022 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A026C7A1C1C37FF00429022 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A026C7B1C1C37FF00429022 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1AFD9BCC1C1C3A0C00DB8569 /* MLLeftDockMenu.h */,
+				1AFD9BCD1C1C3A0C00DB8569 /* MLLeftDockMenu.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1A0EB9881C16C8B9008916A2 /* Class */ = {
 			isa = PBXGroup;
 			children = (
 				1A0EB9891C16C8B9008916A2 /* Ad */,
 				1A0EB99C1C16C8B9008916A2 /* MainTabbar */,
-				1A0EB9981C16C8B9008916A2 /* Main--子控制器01 */,
-				1A0EB9B11C16C8B9008916A2 /* Reading--子控制器02 */,
-				1A0EB9941C16C8B9008916A2 /* Discover--子控制器03 */,
-				1A0EB9CB1C16D922008916A2 /* Video--子控制器04 */,
-				1A0EB9A51C16C8B9008916A2 /* Me--子控制器05 */,
+				1A0EB9981C16C8B9008916A2 /* Main--tabBar子控制器01 */,
+				1A0EB9B11C16C8B9008916A2 /* Reading--tabBar子控制器02 */,
+				1A0EB9941C16C8B9008916A2 /* Discover--tabBar子控制器03 */,
+				1A0EB9CB1C16D922008916A2 /* Video--tabBar子控制器04 */,
+				1A0EB9A51C16C8B9008916A2 /* Me--tabBar子控制器05 */,
 				1A026C681C1BFBF100429022 /* HeadLine-头条_main子控制器 */,
 				1A026C6C1C1BFC3400429022 /* Society-社会--main子控制器 */,
+				1A026C781C1C37FF00429022 /* LeftDockMenu-左侧菜单视图 */,
 				1A0EB9A91C16C8B9008916A2 /* Other */,
 				1A0EB9901C16C8B9008916A2 /* copy1 */,
 			);
@@ -243,14 +281,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1A0EB9941C16C8B9008916A2 /* Discover--子控制器03 */ = {
+		1A0EB9941C16C8B9008916A2 /* Discover--tabBar子控制器03 */ = {
 			isa = PBXGroup;
 			children = (
 				1A0EB9961C16C8B9008916A2 /* Model */,
 				1A0EB9971C16C8B9008916A2 /* View */,
 				1A0EB9951C16C8B9008916A2 /* Controller */,
 			);
-			name = "Discover--子控制器03";
+			name = "Discover--tabBar子控制器03";
 			path = Discover;
 			sourceTree = "<group>";
 		};
@@ -278,14 +316,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1A0EB9981C16C8B9008916A2 /* Main--子控制器01 */ = {
+		1A0EB9981C16C8B9008916A2 /* Main--tabBar子控制器01 */ = {
 			isa = PBXGroup;
 			children = (
 				1A0EB99A1C16C8B9008916A2 /* Model */,
 				1A0EB99B1C16C8B9008916A2 /* View */,
 				1A0EB9991C16C8B9008916A2 /* Controller */,
 			);
-			name = "Main--子控制器01";
+			name = "Main--tabBar子控制器01";
 			path = Main;
 			sourceTree = "<group>";
 		};
@@ -357,14 +395,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1A0EB9A51C16C8B9008916A2 /* Me--子控制器05 */ = {
+		1A0EB9A51C16C8B9008916A2 /* Me--tabBar子控制器05 */ = {
 			isa = PBXGroup;
 			children = (
 				1A0EB9A61C16C8B9008916A2 /* Controller */,
 				1A0EB9A71C16C8B9008916A2 /* Model */,
 				1A0EB9A81C16C8B9008916A2 /* View */,
 			);
-			name = "Me--子控制器05";
+			name = "Me--tabBar子控制器05";
 			path = Me;
 			sourceTree = "<group>";
 		};
@@ -437,14 +475,14 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		1A0EB9B11C16C8B9008916A2 /* Reading--子控制器02 */ = {
+		1A0EB9B11C16C8B9008916A2 /* Reading--tabBar子控制器02 */ = {
 			isa = PBXGroup;
 			children = (
 				1A0EB9B31C16C8B9008916A2 /* Model */,
 				1A0EB9B41C16C8B9008916A2 /* View */,
 				1A0EB9B21C16C8B9008916A2 /* Controller */,
 			);
-			name = "Reading--子控制器02";
+			name = "Reading--tabBar子控制器02";
 			path = Reading;
 			sourceTree = "<group>";
 		};
@@ -472,14 +510,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1A0EB9CB1C16D922008916A2 /* Video--子控制器04 */ = {
+		1A0EB9CB1C16D922008916A2 /* Video--tabBar子控制器04 */ = {
 			isa = PBXGroup;
 			children = (
 				1A0EB9CC1C16D922008916A2 /* Controller */,
 				1A0EB9CD1C16D922008916A2 /* Model */,
 				1A0EB9CE1C16D922008916A2 /* View */,
 			);
-			name = "Video--子控制器04";
+			name = "Video--tabBar子控制器04";
 			path = Discover/Video;
 			sourceTree = "<group>";
 		};
@@ -622,6 +660,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AFDF61E1C194A9000050130 /* MLHomeLabel.m in Sources */,
+				1AFD9BCE1C1C3A0C00DB8569 /* MLLeftDockMenu.m in Sources */,
 				1A0EB9E51C17210D008916A2 /* main.m in Sources */,
 				1A0EB9B61C16C8B9008916A2 /* MLAdViewController.m in Sources */,
 				1A0EB9D11C16DEEF008916A2 /* MLVideoViewController.m in Sources */,

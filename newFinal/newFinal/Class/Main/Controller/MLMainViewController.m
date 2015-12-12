@@ -6,62 +6,108 @@
 //  Copyright © 2015年 SocererGroup. All rights reserved.
 //
 
+//宏定义
+#define navLeftBarBtnItemImgName @"sidebar_nav_news"
+
 #import "MLMainViewController.h"
 #import "MLChannel.h"
 #import "MLHeadLineViewController.h"
 #import "MLHomeLabel.h"
+#import "MLLeftDockMenu.h"
 
-@interface MLMainViewController ()
+@interface MLMainViewController ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
 @property (weak, nonatomic) IBOutlet UIScrollView *contentScrollView;
 @property (nonatomic, strong) NSArray *channelList;
+
+@property (nonatomic, weak) MLLeftDockMenu *leftDockMenu;
 
 @end
 
 @implementation MLMainViewController
 
-- (NSArray *)channelList {
-    if (!_channelList) {
-        
-        //1.加载JSON数据
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"topic_news.json" ofType:nil];
-        
-        NSData *data = [NSData dataWithContentsOfFile:path];
-        
-        //2.对数进行反序列化
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
-        
-        //3.从字典中获取字典数据
-        NSArray *dictarray = dict[dict.keyEnumerator.nextObject];
-        NSMutableArray *arrModel = [NSMutableArray array];
-        
-        //4.将字典转化成模型
-        for (NSDictionary *dict in dictarray) {
-            MLChannel *channel = [MLChannel channelWithDict:dict];
-            
-            [arrModel addObject:channel];
-        }
-        
-        //5.返回从小到大的数据，tid是从小到大排列的
-        
-        _channelList = [arrModel sortedArrayUsingComparator:^NSComparisonResult(MLChannel *obj1, MLChannel *obj2) {
-            return [obj1.tid compare:obj2.tid];
-        }];
-    }
-    
-    return _channelList;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%@",self.channelList);
+//    MLLog(@"%@",self.channelList);
     
     //1.加载子控制器
     [self setupChildControllers];
     
     //2.添加顶部的所有标题
     [self setupTitles];
+    
+    //3.设置titleScrollView的属性
+    [self setupScrollViewProperty];
+    
+    //4.添加默认控制器
+    [self defaultController];
+    
+    //5.设置默认Label的比例值
+    MLHomeLabel *firstLabel = [self.titleScrollView.subviews firstObject];
+    firstLabel.scale = 1.0;
+    
+    //6.设置导航栏左边的item
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:navLeftBarBtnItemImgName] style:UIBarButtonItemStylePlain target:self action:@selector(navLeftItemClick)];
+    
+}
+
+/**
+ *  点击导航栏左边的按钮
+ */
+- (void)navLeftItemClick {
+   //1.如果左边的视图已经存在说明不是第一次点击，需要进行判断是展开还是开闭
+    if (self.leftDockMenu) {
+        //左边视图菜单为展开状态
+       
+        if (self.contentScrollView.contentOffset.x < 0) {//需要闭合
+
+            [self.contentScrollView setContentOffset:CGPointZero animated:YES];
+            
+        }else {//需要展开
+            //让内容视图向右滚动200的间距
+            [self.contentScrollView setContentOffset:CGPointMake(-200, 0) animated:YES];
+         }
+    }else { //2.如果左侧视图不存在，说明是第一次点击，创建左侧视图
+        [self setupLeftDockMenu];
+        [self.contentScrollView setContentOffset:CGPointMake(-200, 0) animated:YES];
+        
+    }
+    
+
+}
+
+/**
+ *  创建左侧视图
+ */
+- (void)setupLeftDockMenu {
+    
+    //1.创建左边的菜单视图
+    MLLeftDockMenu *leftDockMenu = [[MLLeftDockMenu alloc] init];
+    leftDockMenu.height = 300;
+    leftDockMenu.width = 150;
+    leftDockMenu.y = (self.contentScrollView.height - leftDockMenu.height) * 0.5;
+    leftDockMenu.x = -200;
+    
+    //2.将视图添加到滚动视图中
+    [self.contentScrollView addSubview:leftDockMenu];
+    
+    //3.记录左边的视图
+    self.leftDockMenu = leftDockMenu;
+    
+}
+
+
+
+/**
+ *  设置默认控制器
+ */
+- (void)defaultController {
+    MLHeadLineViewController *defaultVC = (MLHeadLineViewController *)[self.childViewControllers firstObject];
+    [self.contentScrollView addSubview:defaultVC.view];
+#warning 这里没有设置frame()，contentView中显示的内容
+    defaultVC.view.frame = self.contentScrollView.bounds;
     
 }
 
@@ -132,6 +178,33 @@
 }
 
 /**
+ *  设置scrollView的属性
+ */
+- (void)setupScrollViewProperty {
+    
+    //1.取消水平和垂直滚动条, 否则会报 [UIImageView setScale:] 找不到方法!
+    self.titleScrollView.showsHorizontalScrollIndicator = NO;
+    self.titleScrollView.showsVerticalScrollIndicator = NO;
+    
+    self.contentScrollView.showsVerticalScrollIndicator = NO;
+    self.contentScrollView.showsHorizontalScrollIndicator = NO;
+    
+    //2.设置分布效果
+    self.contentScrollView.pagingEnabled = YES;
+    
+    //3.设置内容滚动视图的size
+    CGFloat contentW = self.childViewControllers.count * [UIScreen mainScreen].bounds.size.width;
+    self.contentScrollView.contentSize = CGSizeMake(contentW, 0);
+    
+    //4.设置scrollView的代理方法
+    self.contentScrollView.delegate = self;
+    
+    //5.取消scrollView自动调整内边距的属性(如果没有这句代码出现内容在界面上上移的现象)
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+}
+
+/**
  *  通过storyBoard生成控制器
  *
  *  @param name storyBoardName 与 标识符 必须相同
@@ -162,24 +235,42 @@
     
 }
 
+#pragma mark 实现UIScrollView的代理方法
 
 
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark 懒加载频道数组
+- (NSArray *)channelList {
+    if (!_channelList) {
+        
+        //1.加载JSON数据
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"topic_news.json" ofType:nil];
+        
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        
+        //2.对数进行反序列化
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:NULL];
+        
+        //3.从字典中获取字典数据
+        NSArray *dictarray = dict[dict.keyEnumerator.nextObject];
+        NSMutableArray *arrModel = [NSMutableArray array];
+        
+        //4.将字典转化成模型
+        for (NSDictionary *dict in dictarray) {
+            MLChannel *channel = [MLChannel channelWithDict:dict];
+            
+            [arrModel addObject:channel];
+        }
+        
+        //5.返回从小到大的数据，tid是从小到大排列的
+        
+        _channelList = [arrModel sortedArrayUsingComparator:^NSComparisonResult(MLChannel *obj1, MLChannel *obj2) {
+            return [obj1.tid compare:obj2.tid];
+        }];
+    }
+    
+    return _channelList;
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
