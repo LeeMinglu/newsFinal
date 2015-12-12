@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A026C711C1BFD2700429022 /* HeadLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A026C701C1BFD2700429022 /* HeadLine.storyboard */; };
+		1A026C741C1BFD7000429022 /* MLHeadLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A026C731C1BFD7000429022 /* MLHeadLineViewController.m */; };
 		1A04B0771C1AFCFC00463186 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A04B0761C1AFCFC00463186 /* topic_news.json */; };
 		1A04B07A1C1AFE0C00463186 /* MLChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04B0791C1AFE0C00463186 /* MLChannel.m */; };
 		1A0EB9B61C16C8B9008916A2 /* MLAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB98C1C16C8B9008916A2 /* MLAdViewController.m */; };
@@ -34,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A026C701C1BFD2700429022 /* HeadLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeadLine.storyboard; sourceTree = "<group>"; };
+		1A026C721C1BFD7000429022 /* MLHeadLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHeadLineViewController.h; sourceTree = "<group>"; };
+		1A026C731C1BFD7000429022 /* MLHeadLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHeadLineViewController.m; sourceTree = "<group>"; };
 		1A04B0761C1AFCFC00463186 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
 		1A04B0781C1AFE0C00463186 /* MLChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLChannel.h; sourceTree = "<group>"; };
 		1A04B0791C1AFE0C00463186 /* MLChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLChannel.m; sourceTree = "<group>"; };
@@ -88,6 +93,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A026C681C1BFBF100429022 /* HeadLine-头条_main子控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				1A026C6A1C1BFBF100429022 /* Model */,
+				1A026C6B1C1BFBF100429022 /* View */,
+				1A026C691C1BFBF100429022 /* Controller */,
+			);
+			name = "HeadLine-头条_main子控制器";
+			path = HeadLine;
+			sourceTree = "<group>";
+		};
+		1A026C691C1BFBF100429022 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A026C721C1BFD7000429022 /* MLHeadLineViewController.h */,
+				1A026C731C1BFD7000429022 /* MLHeadLineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A026C6A1C1BFBF100429022 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A026C6B1C1BFBF100429022 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A026C701C1BFD2700429022 /* HeadLine.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1A026C6C1C1BFC3400429022 /* Society-社会--main子控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				1A026C6D1C1BFC3400429022 /* Controller */,
+				1A026C6E1C1BFC3400429022 /* Model */,
+				1A026C6F1C1BFC3400429022 /* View */,
+			);
+			name = "Society-社会--main子控制器";
+			path = Society;
+			sourceTree = "<group>";
+		};
+		1A026C6D1C1BFC3400429022 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A026C6E1C1BFC3400429022 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A026C6F1C1BFC3400429022 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1A0EB9881C16C8B9008916A2 /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +170,8 @@
 				1A0EB9941C16C8B9008916A2 /* Discover--子控制器03 */,
 				1A0EB9CB1C16D922008916A2 /* Video--子控制器04 */,
 				1A0EB9A51C16C8B9008916A2 /* Me--子控制器05 */,
+				1A026C681C1BFBF100429022 /* HeadLine-头条_main子控制器 */,
+				1A026C6C1C1BFC3400429022 /* Society-社会--main子控制器 */,
 				1A0EB9A91C16C8B9008916A2 /* Other */,
 				1A0EB9901C16C8B9008916A2 /* copy1 */,
 			);
@@ -533,6 +607,7 @@
 				1A04B0771C1AFCFC00463186 /* topic_news.json in Resources */,
 				1A42131B1C167A2B00C1DE55 /* Assets.xcassets in Resources */,
 				1A0EB9D51C16DF84008916A2 /* Me.storyboard in Resources */,
+				1A026C711C1BFD2700429022 /* HeadLine.storyboard in Resources */,
 				1A0EB9DA1C1715FB008916A2 /* Main.storyboard in Resources */,
 				1A0EB9CA1C16D6BC008916A2 /* Discover.storyboard in Resources */,
 				1A0EB9D31C16DEFD008916A2 /* Video.storyboard in Resources */,
@@ -553,6 +628,7 @@
 				1A0EB9D81C16DFB4008916A2 /* MLMeViewController.m in Sources */,
 				1A0EB9BE1C16CAD4008916A2 /* MLMainViewController.m in Sources */,
 				1A0EB9B91C16C8B9008916A2 /* MLNavigationViewController.m in Sources */,
+				1A026C741C1BFD7000429022 /* MLHeadLineViewController.m in Sources */,
 				1A0EB9BB1C16C8B9008916A2 /* UIView+Extension.m in Sources */,
 				1A0EB9C31C16D212008916A2 /* MLReadingViewController.m in Sources */,
 				1A0EB9DD1C1718EF008916A2 /* MLBottomTabBar.m in Sources */,

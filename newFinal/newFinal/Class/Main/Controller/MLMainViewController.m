@@ -8,6 +8,8 @@
 
 #import "MLMainViewController.h"
 #import "MLChannel.h"
+#import "MLHeadLineViewController.h"
+#import "MLHomeLabel.h"
 
 @interface MLMainViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
@@ -54,7 +56,116 @@
     [super viewDidLoad];
     
     NSLog(@"%@",self.channelList);
+    
+    //1.加载子控制器
+    [self setupChildControllers];
+    
+    //2.添加顶部的所有标题
+    [self setupTitles];
+    
 }
+
+
+/**
+ *  添加子控制器
+ */
+- (void)setupChildControllers {
+    
+    //1.添加新闻控制器
+    MLHeadLineViewController *headLineVC = (MLHeadLineViewController *)[self viewControllerWithName:@"HeadLine"];
+    
+    // 传递url字符串 -> 用来发送请求
+    headLineVC.urlString = [self.channelList[0] tid];
+    
+    //设置控制器的title
+    headLineVC.title = [self.channelList[0] tname];
+    
+    //添加子控制器
+    [self addChildViewController:headLineVC];
+    
+    
+    //循环添加子控制器
+    NSUInteger count = self.channelList.count - 1; //(-1 说明 控制器已经创建了1个控制器)
+    
+    for (NSUInteger i = 1; i < count; i++) {
+        UIViewController *vc = [[UIViewController alloc] init];
+        
+        vc.title = [self.channelList[i] tname];
+        
+        [self addChildViewController:vc];
+    }
+    
+}
+
+/**
+ *  添加顶部的所有标题
+ */
+- (void)setupTitles {
+    
+    NSUInteger count = self.childViewControllers.count;
+    CGFloat w = 80;
+    CGFloat h = 30;
+    CGFloat y = 0;
+    
+    for (int i = 0; i < count; i++) {
+        //1.创建Label
+        MLHomeLabel *label = [[MLHomeLabel alloc] init];
+        label.tag = i;
+        [self.titleScrollView addSubview:label];
+        
+        //2.设置Frame
+        CGFloat x = i * w;
+        label.frame = CGRectMake(x, y, w, h);
+        
+        //3，设置文字
+        label.text = self.childViewControllers[i].title;
+        
+        //4.监听点击
+        [label addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelClick:)]];
+        
+        //5.设置scrollView的大小
+        CGFloat titleContentW = count * w;
+        self.titleScrollView.contentSize = CGSizeMake(titleContentW, 0);
+    }
+    
+    
+}
+
+/**
+ *  通过storyBoard生成控制器
+ *
+ *  @param name storyBoardName 与 标识符 必须相同
+ *
+ *  @return 生成的控制器
+ */
+- (UIViewController *)viewControllerWithName:(NSString *)name {
+    UIStoryboard *HeadLineStoryBoard = [UIStoryboard storyboardWithName:name bundle:nil];
+    
+    return  [HeadLineStoryBoard instantiateViewControllerWithIdentifier:name];
+}
+
+
+/**
+ *  点击标签事件
+ *
+ *  @param recognizer <#recognizer description#>
+ */
+- (void)labelClick:(UITapGestureRecognizer *)recognizer {
+    //1.获得被点击的label
+    MLHomeLabel *label =(MLHomeLabel *)recognizer.view;
+    
+    //2.计算x位置上的偏移量
+    CGFloat offSetX = label.tag * self.contentScrollView.frame.size.width;
+    
+    //3.设置content的偏移量
+    [self.contentScrollView setContentOffset:CGPointMake(offSetX, 0) animated:YES];
+    
+}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
