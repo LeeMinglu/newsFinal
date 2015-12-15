@@ -7,92 +7,130 @@
 //
 
 #import "MLHeadLineViewController.h"
+#import "MLHTTPManager.h"
+#import "MLHeadLineCell.h"
+#import "MBProgressHUD+MLExtension.h"
+#import "MLHeadLine.h"
+#import "MLNewsDetailViewController.h"
+
+
 
 @interface MLHeadLineViewController ()
 
+//存放模型的数组
+@property (nonatomic, strong) NSArray *headlines;
 @end
 
 @implementation MLHeadLineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+     /********* 发送请求,加载数据 *********/
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // @"http://c.m.163.com/nc/article/headline/T1348647853363/0-140.html"
+    //根据域名发送请求数据
+    NSString *domainURL = [kNetEaseDomain stringByAppendingString:self.urlString];
+    
+    domainURL = [NSString stringWithFormat:@"%@/0-140.html",domainURL];
+    
+    //向服务器端发送请求
+    [[MLHTTPManager manager] GET:domainURL parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *responseObject) {
+        //成功回调, 这里需要设置responseObject的类型为NSDictionary
+        //可以将返回来的数据写成plist文件进行查看
+        
+//        [responseObject writeToFile:@"/Users/luoriver/Desktop/luo.plist" atomically:YES];
+        
+        NSArray *dictArray = responseObject[self.urlString];
+        NSMutableArray *arrModel = [NSMutableArray array];
+        
+        for (NSDictionary *dict in dictArray) {
+            MLHeadLine *headline = [MLHeadLine headlineWithDict:dict];
+            [arrModel addObject:headline];
+        }
+        
+        self.headlines = arrModel;
+        
+        [self.tableView reloadData];
+        
+        
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        //回调失败
+        [MBProgressHUD showError:@"网络繁忙，请稍候再试！"];
+        MLLog(@"头条请求错误信息：%@", error);
+        
+    }];
+   
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-#pragma mark - Table view data source
+
+#pragma mark - 实现数据源方法
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.headlines.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    //1.获取数据模型
+    MLHeadLine *headline = self.headlines[indexPath.row];
     
+    //2.使用cell模型来创建cell
+    
+    NSString *ID = [MLHeadLineCell headlineCellWithIdentifier:headline];
+    
+    MLHeadLineCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    
+    //3.设置cell
+    cell.headline = headline;
+    
+    //4.返回cell
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark 实现tableView的代理方法
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    MLHeadLine *headline = self.headlines[indexPath.row];
+    
+    if (headline.imgextra.count == 2) {
+        return 120; // 120 -> @"ImagesCell"
+    }
+    if (headline.isBigImage) {
+        return 180; // 180 -> @"BigImageCell"
+    }
+    return 80;  // 80 -> @"NewsCell"
+
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+
+
+#pragma mark - 在控制器跳转之前的准备工作
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // 1. 获取tableView选中的行
+    NSUInteger row = self.tableView.indexPathForSelectedRow.row;
+    
+    // 2. 创建目标控制器
+    MLNewsDetailViewController *newsDetail = segue.destinationViewController;
+    
+    // 3. 给目标控制器传递数据
+    newsDetail.headline = self.headlines[row];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
 
 @end
