@@ -27,8 +27,9 @@
     
     
 #warning 定义的宏是否正确，有待验证
-    //设置lable的颜色
-    self.textColor = MLRGBColor(scale, 0, 0);
+    // 颜色渐变
+    self.textColor = [UIColor colorWithRed:scale green:0.0 blue:0.0 alpha:1.0];
+
     
     //设置label字体的大小
     CGFloat defaultScale = 0.6;

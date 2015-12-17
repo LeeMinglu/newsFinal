@@ -29,6 +29,10 @@
 		1A0EB9E01C171925008916A2 /* MLBottomTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9DF1C171925008916A2 /* MLBottomTabBarButton.m */; };
 		1A0EB9E41C17210D008916A2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9E21C17210D008916A2 /* AppDelegate.m */; };
 		1A0EB9E51C17210D008916A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0EB9E31C17210D008916A2 /* main.m */; };
+		1A1359ED1C21056B00B411CE /* MLSocietyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1359EB1C21056B00B411CE /* MLSocietyCell.m */; };
+		1A1359EE1C21056B00B411CE /* Society.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1359EC1C21056B00B411CE /* Society.storyboard */; };
+		1A1359F11C21060200B411CE /* MLSociety.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1359F01C21060200B411CE /* MLSociety.m */; };
+		1A1359F41C2107A700B411CE /* MLSocietyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1359F31C2107A700B411CE /* MLSocietyViewController.m */; };
 		1A1463151C1D9E5E00727C27 /* HeadLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1463121C1D9E5E00727C27 /* HeadLine.storyboard */; };
 		1A1463161C1D9E5E00727C27 /* MLHeadLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1463141C1D9E5E00727C27 /* MLHeadLineCell.m */; };
 		1A1463221C1D9F1A00727C27 /* MLNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14631A1C1D9F1A00727C27 /* MLNewsDetailViewController.m */; };
@@ -112,6 +116,13 @@
 		1A0EB9E11C17210D008916A2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1A0EB9E21C17210D008916A2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1A0EB9E31C17210D008916A2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A1359EA1C21056B00B411CE /* MLSocietyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSocietyCell.h; sourceTree = "<group>"; };
+		1A1359EB1C21056B00B411CE /* MLSocietyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSocietyCell.m; sourceTree = "<group>"; };
+		1A1359EC1C21056B00B411CE /* Society.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Society.storyboard; sourceTree = "<group>"; };
+		1A1359EF1C21060200B411CE /* MLSociety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSociety.h; sourceTree = "<group>"; };
+		1A1359F01C21060200B411CE /* MLSociety.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSociety.m; sourceTree = "<group>"; };
+		1A1359F21C2107A700B411CE /* MLSocietyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSocietyViewController.h; sourceTree = "<group>"; };
+		1A1359F31C2107A700B411CE /* MLSocietyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSocietyViewController.m; sourceTree = "<group>"; };
 		1A1463121C1D9E5E00727C27 /* HeadLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeadLine.storyboard; sourceTree = "<group>"; };
 		1A1463131C1D9E5E00727C27 /* MLHeadLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHeadLineCell.h; sourceTree = "<group>"; };
 		1A1463141C1D9E5E00727C27 /* MLHeadLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHeadLineCell.m; sourceTree = "<group>"; };
@@ -262,6 +273,8 @@
 		1A026C6D1C1BFC3400429022 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A1359F21C2107A700B411CE /* MLSocietyViewController.h */,
+				1A1359F31C2107A700B411CE /* MLSocietyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +282,8 @@
 		1A026C6E1C1BFC3400429022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1A1359EF1C21060200B411CE /* MLSociety.h */,
+				1A1359F01C21060200B411CE /* MLSociety.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -276,6 +291,9 @@
 		1A026C6F1C1BFC3400429022 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A1359EA1C21056B00B411CE /* MLSocietyCell.h */,
+				1A1359EB1C21056B00B411CE /* MLSocietyCell.m */,
+				1A1359EC1C21056B00B411CE /* Society.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -904,6 +922,7 @@
 				1A0EB9DA1C1715FB008916A2 /* Main.storyboard in Resources */,
 				1A0EB9CA1C16D6BC008916A2 /* Discover.storyboard in Resources */,
 				1A0EB9D31C16DEFD008916A2 /* Video.storyboard in Resources */,
+				1A1359EE1C21056B00B411CE /* Society.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,6 +947,7 @@
 				1AFD9C0B1C1C554B00DB8569 /* AFHTTPSessionManager.m in Sources */,
 				1AFD9C191C1C554B00DB8569 /* SDWebImageDownloaderOperation.m in Sources */,
 				1AFD9C251C1C55DA00DB8569 /* MLHTTPManager.m in Sources */,
+				1A1359ED1C21056B00B411CE /* MLSocietyCell.m in Sources */,
 				1AFD9C1B1C1C554B00DB8569 /* SDWebImagePrefetcher.m in Sources */,
 				1A0EB9BE1C16CAD4008916A2 /* MLMainViewController.m in Sources */,
 				1A0EB9B91C16C8B9008916A2 /* MLNavigationViewController.m in Sources */,
@@ -956,9 +976,11 @@
 				1A0EB9E01C171925008916A2 /* MLBottomTabBarButton.m in Sources */,
 				1AFD9C211C1C554B00DB8569 /* UIImageView+WebCache.m in Sources */,
 				1AFD9C181C1C554B00DB8569 /* SDWebImageDownloader.m in Sources */,
+				1A1359F11C21060200B411CE /* MLSociety.m in Sources */,
 				1A14632B1C1DA12500727C27 /* MLStatusBarHUD.m in Sources */,
 				1AFD9C0A1C1C554B00DB8569 /* AFHTTPRequestOperationManager.m in Sources */,
 				1AFD9C131C1C554B00DB8569 /* MKAnnotationView+WebCache.m in Sources */,
+				1A1359F41C2107A700B411CE /* MLSocietyViewController.m in Sources */,
 				1AFD9C0D1C1C554B00DB8569 /* AFSecurityPolicy.m in Sources */,
 				1AFD9C171C1C554B00DB8569 /* SDWebImageDecoder.m in Sources */,
 				1AFD9C2A1C1C590900DB8569 /* MBProgressHUD+MLExtension.m in Sources */,
